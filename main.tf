@@ -35,7 +35,7 @@ resource "aws_s3_bucket_policy" "public_policy" {
             {
                 Sid         = "PublicReadGetObject",
                 Effect      = "Allow",
-                Principal  = "*",
+                Principal   = "*",
                 Action      = "s3:GetObject",
                 Resource    = ["${aws_s3_bucket.static_website.arn}",
                                 "${aws_s3_bucket.static_website.arn}/*"]
